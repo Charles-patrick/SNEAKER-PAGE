@@ -6,6 +6,9 @@ const shoeFour = document.querySelector(".shoe4")
 const numBer = document.querySelector("#zero")
 const minusBtn = document.querySelector(".minus-btn")
 const addBtn = document.querySelector(".add-btn")
+const dropDown = document.querySelector(".dropdown")
+const cartBtn = document.querySelector(".cart-btn")
+
 let count = 0
 numBer.textContent = count
 

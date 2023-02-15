@@ -4,34 +4,79 @@ body{
 /* button:hover{
     transform: translateY(2px);
 } */
+.dropdown {
+    width: 25%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    background-color: #fff;
+    margin-top: 0.5px;
+}
+.dropdown-display{
+        width: 25%;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        position: absolute;
+        right: 10%;
+        top: 15%;
+        background-color: #fff;
+        margin-top: 0.5px;
+}
+.cart-btn:hover .dropdown {
+    display: block;
+
+}
+.dropdown h2 {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.dropdown hr {
+    margin: auto 0;
+    background-color: black;
+}
  .dropdown-info .cart-item-info {
      display: flex;
      padding: 5px 5%;
  }
- header .cart-btn:hover .dropdown{
+.dropdown-info .cart-item-info .dropdown-img {
+    width: 100%;
+    height: 100%;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    display: block;
-    position: absolute;
-        right: 10%;
-    background-color: #fff;
-    margin-top: 0.5px;
+    border-radius: 5px;
 }
-header .cart-btn .dropdown {
-    display: none;
-    border: solid 1px;
-    width: 250px;
+.dropdown-info .drop-bin {
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border: none;
+}
+.dropdown-info .drop-text {
+    width: 70%;
+    text-align: left;
+    padding-left: 3px;
+}
+.dropdown .dropdown-info {
+    padding: 10px 2px;
 }
 .checkout{
-    color: pink;
-    background-color: hsl(26, 100%, 55%) ;
-    margin: auto 5%;
+    padding: 5px 5%;
 }
-select{
-    margin-left: -23px;
+.checkout-btn{
+    width: 100%;
+    border: none;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 5px;
 }
-
+.checkout-btn p{
+    color: #fff;
+    font-size: 12px;
+}
 
 
 
@@ -97,50 +142,23 @@ header .cart-btn{
 }
 
 
-header .cart-btn .dropdown h2{
-    text-align: left;
-    padding-left: 5%;
-}
-header .cart-btn .dropdown ul{
-    margin: none;
-    padding-left: none;
-}
-header .cart-btn .dropdown hr{
-    margin: auto 0;
-    background-color: black;
-}
+
 .empty-cart{
-    font-size: 11px;
+    font-size: 12px;
     line-height: 6px;
-}
-header .cart-btn .dropdown section .dropdown-info{
-    padding: 10px 2px;
+    text-align: center;
 }
 
 .drop-img-cont{
         width: 20%;
 }
-.dropdown-info .drop-text{
-    width: 70%;
-    text-align: left;
-    padding-left: 3px;
-}
+
 .drop-mid-text-el{
     color: rgb(116, 111, 111);
     font-size: 11px;
     line-height: 6px;
 }
-.dropdown-info .drop-bin{
-    padding-top: 15px;
-    padding-left: 5px;
-}
 
- .dropdown-info .cart-item-info .dropdown-img{
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
- }
 .total-el{
     color: black;
     font-weight: 800;
