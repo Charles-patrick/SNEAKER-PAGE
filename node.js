@@ -12,6 +12,14 @@ const cartBtn = document.querySelector(".cart-btn")
 let count = 0
 numBer.textContent = count
 
+html.addEventListener("click", ()=>{
+    cartBtn.className = "dropdown"
+  })
+
+cartBtn.addEventListener("click", ()=>{
+    dropDown.className = "dropdown-display"
+  })
+
 shoeTwo.addEventListener("click", ()=>{
      bigCont.innerHTML = "<img src='image-product-2.jpg' class='img-one'>"
   })
