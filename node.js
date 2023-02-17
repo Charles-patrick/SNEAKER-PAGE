@@ -8,17 +8,37 @@ const minusBtn = document.querySelector(".minus-btn")
 const addBtn = document.querySelector(".add-btn")
 const dropDown = document.querySelector(".dropdown")
 const cartBtn = document.querySelector(".cart-btn")
+const bodyEl = document.getElementsByName("body")
+const addtocartBtn = document.querySelector(".add-to-cart")
+const emptyCartel = document.querySelector(".empty-cart")
+const fallLimitedinfo = document.querySelector(".empty-cart-hidden")
+console.log(emptyCartel)
+console.log(fallLimitedinfo)
 
 let count = 0
 numBer.textContent = count
 
-html.addEventListener("click", ()=>{
-    cartBtn.className = "dropdown"
+// dropDown.forEach ((x) => {
+//   window.onclick = function (event) {
+//     if(event.target == x){
+//         dropdown.style.display = "none"
+//     }
+// }
+// });
+
+fallLimitedinfo.classList.add("hidden")
+
+addtocartBtn.addEventListener("click", ()=>{
+    emptyCartel.classList.add("hidden")
+    fallLimitedinfo.classList.remove("hidden")
   })
+
+
 
 cartBtn.addEventListener("click", ()=>{
     dropDown.className = "dropdown-display"
   })
+
 
 shoeTwo.addEventListener("click", ()=>{
      bigCont.innerHTML = "<img src='image-product-2.jpg' class='img-one'>"
