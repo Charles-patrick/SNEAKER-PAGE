@@ -17,17 +17,33 @@ let totalEl = document.querySelector(".total-el")
 const numBer = document.querySelector("#zero")
 let moneyEl = document.querySelector(".money").innerHTML
 let moneyvalueEl = document.querySelector(".money-value").innerHTML
-let count = 0
+const deletebinBtn = document.querySelector(".delete-bin")
+const modalEl = document.querySelector("#modal")
+let closeBtn = document.querySelector(".close-btn")
+
+let count = 1
 numBer.textContent = count
 prIce.textContent = "$" + moneyvalueEl
+modalEl.classList.add("hidden")
 
+// window.addEventListener('click', function(e) {
+//    if (e.target !== dropDown) {
+//       console.log("maddd")
+//       // dropDown.className = "hidden"
+//    }
+// })
+closeBtn.addEventListener("click", ()=>{
+   modalEl.classList.add("hidden")
+  })
 
+bigCont.addEventListener("click", ()=>{
+   modalEl.classList.remove("hidden")
+  })
 
-
-
-
-
-
+deletebinBtn.addEventListener("click", ()=>{
+    fallLimitedinfo.classList.add("hidden")
+    emptyCartel.classList.remove("hidden")
+  })
 
 fallLimitedinfo.classList.add("hidden")
 
@@ -35,10 +51,11 @@ addtocartBtn.addEventListener("click", ()=>{
     emptyCartel.classList.add("hidden")
     fallLimitedinfo.classList.remove("hidden")
     numberOfshoes.textContent = numBer.textContent
+        timesFxn()
   })
-
-
-
+  cartBtn.addEventListener("dblclick", ()=>{
+    dropDown.className = "hidden"
+  })
 
 cartBtn.addEventListener("click", ()=>{
     dropDown.className = "dropdown-display"
@@ -62,19 +79,19 @@ shoeFour.addEventListener("click", ()=>{
   })    
   
   function timesFxn() {
-   let multiPlication = moneyvalueEl * numBer.textContent   
-       totalEl.textContent = "$" + multiPlication
+   let multiPlication = parseFloat(moneyvalueEl) * Number(numBer.textContent )  
+       totalEl.textContent = "$" + multiPlication.toFixed(2)
   }
   
 
  minusBtn.addEventListener("click", ()=>{
-    
-     if (count >= 1) {
+          
+     if (count >= 2) {
         numBer.textContent = count -= 1
      } else {
         numBer.textContent = count
      }
-      timesFxn()
+  
     }) 
     
  addBtn.addEventListener("click", ()=>{
